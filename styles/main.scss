@@ -1,0 +1,173 @@
+@import 'bourbon/bourbon';
+$visual-grid: true;
+@import 'neat/neat';
+
+//CLEAR BORDER PROPERTIES
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+//PAGE LAYOUT POINTS
+
+$mobile: new-breakpoint(max-width 500px 4);
+$tablet: new-breakpoint(max-width 840px 6);
+
+
+//FONT COLORS
+
+$green: rgb(6, 118, 85);
+$aluminum: rgb(153, 153, 153);
+$oil: rgb(51, 51, 51);
+$zircon: rgb(225, 225, 225);
+$bokaragray: rgb(40, 40, 40);
+$white: rgb(255, 255, 255);
+
+//FONT FAMILY
+
+$main-font: "Cookie", "Inconsolata", "Open Sans", sans-serif;
+$secondary-font: "Roboto", "Open Sans", "Inconsolata", sans-serif;
+$tertiary-font: "Open Sans", "Inconsolata", sans-serif;
+
+.container{
+  border-radius: 7px;
+}
+
+.header .mainbody .footer {
+  @include omega(2n);
+
+}
+
+headerchatbox
+
+.boxstructure {
+  @include span-columns(12);
+  @include omega();
+  display: block;
+
+}
+
+.header {
+  background-color: $green;
+  font-family: $main-font;
+  font-style: cursive;
+  color: $white;
+  font-size: 40px;
+  border-bottom: 1px solid $oil;
+  vertical-align: center;
+  padding: 10px 0 10px 10px;
+
+
+}
+
+.mainbody {
+  height: 500px;
+  background-color: $white;
+  background-image: url(http://tn.clashot.com/thumbs/3211776/57504548/thumb_w800.jpg);
+  font-family: $secondary-font;
+
+}
+
+.insidestructure {
+  @include span-columns(4);
+  display: inline-block;
+
+}
+
+.footer{
+  background-color: $white;
+  height: 10px;
+
+}
+
+.input-container {
+  position: relative;
+  text-align: center;
+  width: 40%;
+  margin: 10px auto 0 0;
+  background-color: clear;
+  padding: 20px;
+  font-size: 20px;
+  color: $white;
+
+  .username-display {
+    margin: 0;
+    text-align: left;
+    position: absolute;
+    left: 5%;
+    bottom: 5px;
+    font-size: 10px;
+    color: #ddd;
+  }
+  .input {
+    border: none;
+    outline: false;
+    background-color: clear;
+    transition: all ease 0.5s;
+    &:hover {
+      border-top: 1px dotted #ddd;
+      border-bottom: 1px dotted #ddd;
+      border-left: 1px dotted #ddd;
+    }
+    &:hover+.submit {
+      border-top: 1px dotted #ddd;
+      border-bottom: 1px dotted #ddd;
+      border-right: 1px dotted #ddd;
+    }
+    &:focus{
+      background-color: #ddd;
+      color: none;
+    }
+    &:focus+.submit{
+      background-color: #ddd;
+      color: $oil;
+      border-left: 1px dotted $oil;
+    }
+  }
+
+  .submit {
+    transition: all ease 0.5s;
+    outline: false;
+  }
+
+  .input {
+    width: 90%;
+    height: 40px;
+    font-size: 20px;
+    font-family: "Helvetica", sans-serif;
+    outline: none;
+    background-color: none;
+    border-radius: 20px 0 0 20px;
+    padding-left: 20px;
+  }
+  .submit {
+    height: 40px;
+    line-height: 30px;
+    font-size: 30px;
+    color: white;
+    padding: 0 10px 5px 10px;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    vertical-align: top;
+    background-color: $oil;
+  }
+}
+
+
+.fi-sound{
+  font-size:40px;
+  color: $white;
+}
+
+.fi-sound:hover {
+  font-size:40px;
+  color: $oil;
+}
+
+.fi-sound:visited {
+  font-size:40px;
+  color: $white;
+}
