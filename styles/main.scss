@@ -33,7 +33,23 @@ $secondary-font: "Roboto", "Open Sans", "Inconsolata", sans-serif;
 $tertiary-font: "Open Sans", "Inconsolata", sans-serif;
 
 .container{
+  @include outer-container;
   border-radius: 7px;
+  position: absolute;
+  top: 0;
+  left: 26.5%;
+  width: 900px;
+  &.screen {
+    z-index: -1;
+    transition: all ease 0.2s;
+  }
+}
+
+.hide-behind {
+  background: white;
+  width: 100%;
+  height: 900px;
+  z-index: 2;
 }
 
 .header .mainbody .footer {
@@ -41,7 +57,7 @@ $tertiary-font: "Open Sans", "Inconsolata", sans-serif;
 
 }
 
-headerchatbox
+//headerchatbox
 
 .boxstructure {
   @include span-columns(12);

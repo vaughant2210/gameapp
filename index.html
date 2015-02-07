@@ -14,8 +14,14 @@
 <body>
 
 
-
-  <section class="container">
+  <div class="hide-behind">
+    <!-- blank panel to hide unused state frames -->
+  </div>
+  <!-- 
+        SCREEN ONE:
+        - - - Login - - -
+  -->
+  <div class="container screen one">
 
     <div class="header">
       <div class="boxstructure">Let's Eat, Let's Play</div>
@@ -41,10 +47,13 @@
       </div>
     </div>
 
-
-  </section>
-
-  <section class="containertwo">
+    <button class="next one">Next Screen</button>
+  </div>
+  <!-- 
+        SCREEN TWO:
+        - - - Choose Enemy / Restaurant?  - - -
+  -->
+  <div class="container screen two">
 
     <div class="header">
       <div class="boxstructure">Let's Eat, Let's Play</div>
@@ -52,14 +61,15 @@
 
     <div class="mainbody">
       <div class="boxstructure">
-
+        <h1>Second panel - choose enemy? Choose food type? Etc, etc.</h1>
+        <!--
         <div class="input-container"> Reservations for:
           <input type="text" class="input" placeholder="">
           <button class="submit">Bon Apetite<i class="fi-key"></i></button>
 
           <div>     <a href="#a"><i class="fi-sound"></i></a> </div>
         </div>
-
+        -->
       </div>
 
     </div>
@@ -70,11 +80,14 @@
       </div>
     </div>
     
+    <button class="next two">Next Screen</button>
+  </div>
 
-  </section>
-
-
-  <section class="containerthree">
+  <!-- 
+        SCREEN THREE:
+        - - - Game screen - - -
+  -->
+  <div class="container screen three">
 
     <div class="header">
       <div class="boxstructure">Let's Eat, Let's Play</div>
@@ -82,14 +95,15 @@
 
     <div class="mainbody">
       <div class="boxstructure">
-
+        <h1>Game screen - game content, player(s), foods, etc</h1>
+        <!--
         <div class="input-container"> Reservations for:
           <input type="text" class="input" placeholder="">
           <button class="submit">Bon Apetite<i class="fi-key"></i></button>
 
           <div>     <a href="#a"><i class="fi-sound"></i></a> </div>
         </div>
-
+        -->
       </div>
 
     </div>
@@ -100,12 +114,8 @@
       </div>
     </div>
 
-
-  </section>
-
-
-
-
+    <button class="next three">Next Screen</button>
+  </div>
 
 
   <footer>
@@ -113,9 +123,6 @@
 
 
   </footer>
-
-
-
 
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/underscore/underscore.js"></script>
